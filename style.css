@@ -6,6 +6,7 @@
 	--surface:    #E7E5EC;
 	--periwinkle: #BBC2E2;
 	--lavender:   #B7B5E4;
+  --white:      #FFFFFF;
 
 	--serif: Georgia, "Iowan Old Style", "Times New Roman", serif;
 	--mono:  ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
@@ -38,7 +39,7 @@ h2 { font-size:1.05rem; font-family: var(--mono); text-transform: uppercase;
 h3 { font-size: 1.45rem; }
 p  { margin: 0 0 1em; }
 
-a  { color: var(--ink); text_underline-offset: 3px; }	
+a  { color: var(--ink); text-underline-offset: 3px; }	
 
 .site-header {
 	border-bottom: 2px solid var(--ink);
@@ -96,11 +97,23 @@ main { padding: 3rem 2rem; max-width: 1180px; margin: 0 auto; }
 }
 .button:hover { background: var(--stone-text); }
 
+#login {
+  color: var(--ground);
+  background: var(--stone);
+  font-family: var(--mono);
+}
+
+#login:hover { background: var(--ink); }
+
 .gallery-section { margin-top: 4.5rem; }
 .gallery-section h2 { border-top: 2px solid var(--ink); padding-top: 0.9rem;
                       margin-bottom: 1.5rem; }
 
-.card img { height: 190px; object-fit: cover; width: 100%; }
+.card img { height: fit-content; object-fit: cover; width: 100%; }
+
+.card video { height: 150px; object-fit: cover; width: 100%; }
+
+.card.feature video { height: 300px }
 
 .card {
   background: var(--surface);
@@ -218,7 +231,7 @@ nav {
 .hero {
 	display: flex;
 	align-items: center;
-	gap: 5rem;
+	gap: 1rem;
 }
 
 .gallery {
@@ -237,6 +250,12 @@ main {
     gap: 2.5rem;
 }
 
+audio {
+  width: 100%;
+  max-width: 100%;
+  margin-top: 0.5rem;
+}
+
 /* tablet responsive */
 @media (max-width: 768px) {
   nav {
@@ -253,8 +272,18 @@ main {
     grid-template-columns: repeat(2, 1fr);
   }
 
+  .card video { height: 190px }
+
+  .card.feature video { height: 300px }
+
   .feature {
     grid-column: span 2;
+  }
+
+  aside figure img{
+    max-width: 70%;
+    max-height: 70%;
+    margin: auto;
   }
 }
 
@@ -262,11 +291,15 @@ main {
 @media (max-width: 480px) {
 
   .gallery {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: minmax(0, 1fr);
   }
 
+  .card video { height: 300px }
+
+  .card.feature video { height: 300px }
+
   .feature {
-    grid-column: span 2;
+    grid-column: span 1;
   }
 
   nav {
@@ -275,11 +308,33 @@ main {
     padding-bottom: 0.75rem;
   }
 
-  .hero {
-    flex-direction: column;
+  .nav-links {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.75rem 1.25rem;
   }
 
+  .nav-links a {
+    padding: 0.5rem 0;
+  }
+
+  .nav-login {
+    gap: 1rem;
+  }
+
+  .hero {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .hero figure {
+    margin: 0 0 1.5rem 0;
+    width: 100%;
+  }
   h1 { font-size: 1.9rem; }
-  main { padding: 1.5rem 1rem; }
+  main {
+    padding: 1.5rem 1rem;
+    grid-template-columns: minmax(0, 1fr);
+  }
   .site-header { padding: 0 1rem; }
 }

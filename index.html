@@ -6,6 +6,7 @@
 	<meta name="viewport" content="width=device-width,
 	initial-scale=1.0">
 	<title>Student Learning Platform</title>
+  <link rel="icon" type="image/png" href="/images/logo.png">
 	<link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -16,13 +17,13 @@
 			<ul class="nav-links">
 				<li><a href="#popular">Courses</a></li>
 				<li><a href="#forums">Forums</a></li>
-				<li><a href="#pricing">Pricing</a></li>
-				<li><a href="#aboutus">About Us</a></li>
+				<li><a href="#video">Videos</a></li>
+				<li><a href="#about">About Us</a></li>
 			</ul>
 
 			<ul class="nav-login">
-				<li><a href="#login">Login</a></li>
-				<li><a href="#signup">Sign Up</a></li>
+				<li><a href="#login" class="button" id="login">Login</a></li>
+				<li><a href="#signup" class="button" id="SignUp">Sign Up</a></li>
 			</ul>
 		</nav>
 	</header>
@@ -36,18 +37,16 @@
 				</figure>
 				<div class="hero-text">
           			<p class="eyebrow">Coding is Fun!</p>
-          			<h1>Learn to code, code to create, create to inspire.</h1>
+          			<h1>Learn to code, Code to create, Create to inspire.</h1>
 			        <p>Choose a selection of courses we offer and bring your ideas in the real world.</p>
           			<a href="#popular" class="button">Get Started</a>
-       			</div>
-      		</section>
-      		<section class="gallery-section" id="popular">
+       	</div>
+      </section>
+      <section class="gallery-section" id="popular">
         <h2>Popular Courses</h2>
-
         <div class="gallery">
-
           <article class="card feature">
-            <img src="images/card-1.svg" alt="">
+            <img src="https://miro.medium.com/v2/resize:fit:828/format:webp/0*yQiGbHGeV0tko6EW.png" alt="PHP/MYSQL logo">
             <div class="card-body">
               <p class="card-meta"><span>01</span>Wanna Become a Backend Web Developer?</p>
               <h3>PHP / MYSQL</h3>
@@ -57,7 +56,7 @@
           </article>
 
           <article class="card">
-            <img src="images/card-2.svg" alt="">
+            <img src="https://static.vecteezy.com/system/resources/thumbnails/048/332/150/small/java-programming-language-java-logo-free-png.png" alt="Java logo">
             <div class="card-body">
               <p class="card-meta"><span>02</span>Wanna create an android app?</p>
               <h3>JAVA</h3>
@@ -67,32 +66,112 @@
           </article>
 
           <article class="card">
-            <img src="images/card-3.svg" alt="">
+            <img src="https://play-lh.googleusercontent.com/EeM4ZGle00SEQIaYV0cRcI7ieGeoub_1DkeC4sxXrg87_URoL6E-kQzYZyCbrWS4s9TdQZut3w-UlqfClqljuLo" alt="HTML5/CSS3 logo">
             <div class="card-body">
               <p class="card-meta"><span>03</span>Wanna create a Website?</p>
               <h3>HTML5 / CSS3</h3>
               <p>This course helps you to create any website and implement styling of your choosing. You will learn the basics of HTML5 and CSS3 and learn to make a resonsive site.</p>
-              <a href="#" class="card-link">Read more</a>
+              <a href="https://www.youtube.com/watch?v=AfAuoPvfWKU" class="card-link">Read more</a>
             </div>
           </article>
 
           <article class="card">
-            <img src="images/card-4.svg" alt="">
+            <img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c3/Python-logo-notext.svg/3840px-Python-logo-notext.svg.png?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=thumbnail" alt="Python Logo">
             <div class="card-body">
               <p class="card-meta"><span>04</span>Become a data scientist?</p>
               <h3>Python</h3>
-              <p>In this course you begin with the basics of Python and then learn to use the Numpy library and implement different models to analyze data.</p>
+              <p>In this course you begin with the basics of Python and then learn to use the Numpy library and implement different models to analyze data.
+              </p>
               <a href="#" class="card-link">Read more</a>
             </div>
           </article>
 
           <article class="card">
-            <img src="images/card-5.svg" alt="">
+            <img src="https://cdn.icon-icons.com/icons2/233/PNG/512/Unity_26208.png" alt="Unity Logo">
             <div class="card-body">
               <p class="card-meta"><span>05</span>Create a game with Unity.</p>
               <h3>Unity</h3>
-              <p>This course offers you a comprehensive guidance on creating games in the unity engine.</p>
+              <p>This course offers you a comprehensive guidance on creating games in the Unity Engine.
+              </p>
               <a href="#" class="card-link">Read more</a>
+            </div>
+          </article>
+
+        </div>
+      </section>
+
+      <section class="gallery-section" id="video">
+        <h2>Video Guides</h2>
+        <div class="gallery">
+          <article class="card feature">
+            <video controls>
+              <source src="videos/php.mkv" type="video/mkv">
+              <source src="videos/php.webm" type="video/webm">
+                Your Browser does not support this video playback.
+            </video>
+            <div class="card-body">
+              <p class="card-meta"><span>01</span>Wanna Become a Backend Web Developer?</p>
+              <h3>PHP / MYSQL</h3>
+              <p>This is a PHP video tutorial for beginners.</p>
+              <a href="https://www.youtube.com/watch?v=AfAuoPvfWKU" target="_blank" class="card-link">View Full Video</a>
+            </div>
+          </article>
+
+          <article class="card">
+            <video controls>
+              <source src="videos/java.mkv" type="video/mkv">
+              <source src="videos/java.webm" type="video/webm">
+                Your Browser does not support this video playback.
+            </video>
+            <div class="card-body">
+              <p class="card-meta"><span>02</span>Wanna create an android app?</p>
+              <h3>JAVA</h3>
+              <p>This is a beginner tutorial course for Java programming.</p>
+              <a href="https://www.youtube.com/watch?v=A74TOX803D0" target="_blank" class="card-link">View Full Video</a>
+            </div>
+          </article>
+
+          <article class="card">
+            <video controls>
+              <source src="videos/html.mkv" type="video/mkv">
+              <source src="videos/html.webm" type="video/webm">
+                Your Browser does not support this video playback.
+            </video>
+            <div class="card-body">
+              <p class="card-meta"><span>03</span>Wanna create a Website?</p>
+              <h3>HTML5 / CSS3</h3>
+              <p>This is a beginner friendly tutorial for HTML5 and CSS3.</p>
+              <a href="https://www.youtube.com/watch?v=G3e-cpL7ofc" target="_blank" class="card-link">View Full Video</a>
+            </div>
+          </article>
+
+          <article class="card">
+            <video controls>
+              <source src="videos/python.mkv" type="video/mkv">
+              <source src="videos/python.webm" type="video/webm">
+                Your Browser does not support this video playback.
+            </video>
+            <div class="card-body">
+              <p class="card-meta"><span>04</span>Become a data scientist?</p>
+              <h3>Python</h3>
+              <p>A beginner friendly tutorial for Python programming language.
+              </p>
+              <a href="https://www.youtube.com/watch?v=nHAPcZRg9VM" target="_blank" class="card-link">View Full Video</a>
+            </div>
+          </article>
+
+          <article class="card">
+            <video controls>
+              <source src="videos/unity.mkv" type="video/mkv">
+              <source src="videos/unity.webm" type="video/webm">
+                Your Browser does not support this video playback.
+            </video>
+            <div class="card-body">
+              <p class="card-meta"><span>05</span>Create a game with Unity.</p>
+              <h3>Unity</h3>
+              <p>An easy guide to using Unity Engine for game development.
+              </p>
+              <a href="https://www.youtube.com/watch?v=XtQMytORBmM" target="_blank" class="card-link">View Full Video</a>
             </div>
           </article>
 
@@ -101,34 +180,42 @@
 
   	</div>
 
-  	<aside id="about">
+    <aside id="about">
       <h2>About</h2>
 
       <figure>
-        <img src="images/profile.svg" alt="Abstract portrait mark">
-        <figcaption>Sarayu Gautam, Kathmandu.</figcaption>
+        <img src="images/logo.png" alt="Logo">
+        <figcaption>Student Learning Platform.</figcaption>
       </figure>
 
-      <p>I teach full stack web development at Herald College Kathmandu
-         and build things in PHP and JavaScript the rest of the time.</p>
+      <p>We teach a different variety of techonologies to enable people to innovate and invent through step by step guides and tasks for a betterment of IT in Nepal.</p>
 
-      <h3 id="teaching">Teaching</h3>
+      <h3 id="teaching">Teaching Methods</h3>
       <dl class="meta-list">
-        <dt>Module</dt>
-        <dd>5CS045 Full Stack Web Development</dd>
-        <dt>Prerequisite</dt>
-        <dd>Internet Software Architecture</dd>
-        <dt>Term</dt>
-        <dd>Twelve weeks, one project</dd>
+        <dt>Video guides</dt>
+        <dd>We provide direct access to useful videos.</dd>
+        <dt>Evaluation</dt>
+        <dd>Task based evaluation is done to ensure implementation of learnings.</dd>
+        <dt>Online Sessions</dt>
+        <dd>We conduct online sessions on a weekly basis to further explain the topics with live demo.</dd>
       </dl>
+
+      <h3>Dial-up Internet Sound</h3>
+      <p>Listen to How a Computer connected to the internet back in the days.</p>
+      <audio controls>
+        <source src="audios/start.mp3" type="audio/mpeg">
+        <source src="audios/start.ogg" type="audio/ogg">
+        Your browser does not support audio element.
+      </audio>
     </aside>
 
 </main>
 
 <footer id="contact">
-    <p>Herald College Kathmandu</p>
-    <p class="footer-mail"><a href="#">sarayu@example.com</a></p>
-    <small>Built for 5CS045 Full Stack Web Development, Week 1.</small>
+    <p>Kathmandu</p>
+    <p class="footer-mail"><a href="#">slp@xyz.com</a>
+    </p>
+    <small>Built for Enabling people to code.</small>
 </footer>
 
 
